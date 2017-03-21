@@ -49,17 +49,17 @@ import java.util.Comparator;
 /**
  * Created by rimi on 2017. 3. 20..
  * Copyright (c) 2017 UserInsight Corp.
- * <p>
+ *
  * Layout manager that allows the user to flip left and right
  * through pages of data.  You supply an implementation of a
  * {@link PagerAdapter} to generate the pages that the view shows.
- * <p>
- * <p>Note this class is currently under early design and
+ *
+ * Note this class is currently under early design and
  * development.  The API will likely change in later updates of
  * the compatibility library, requiring changes to the source code
- * of apps when they are compiled against the newer version.</p>
- * <p>
- * <p>ViewPager is most often used in conjunction with {@link android.app.Fragment},
+ * of apps when they are compiled against the newer version.
+ *
+ * ViewPager is most often used in conjunction with {@link android.app.Fragment},
  * which is a convenient way to supply and manage the lifecycle of each page.
  * There are standard adapters implemented for using fragments with the ViewPager,
  * which cover the most common use cases.  These are
@@ -67,13 +67,10 @@ import java.util.Comparator;
  * {@link android.support.v4.app.FragmentStatePagerAdapter}; each of these
  * classes have simple code showing how to build a full user interface
  * with them.
- * <p>
- * <p>Here is a more complicated example of ViewPager, using it in conjuction
+ *
+ * Here is a more complicated example of ViewPager, using it in conjuction
  * with {@link android.app.ActionBar} tabs.  You can find other examples of using
  * ViewPager in the API 4+ Support Demos and API 13+ Support Demos sample code.
- * <p>
- * {@sample development/samples/Support13Demos/src/com/example/android/supportv13/app/ActionBarTabsPager.java
- * complete}
  */
 
 public class ViewPagerEx extends ViewGroup {
@@ -321,10 +318,10 @@ public class ViewPagerEx extends ViewGroup {
      * A PageTransformer is invoked whenever a visible/attached page is scrolled.
      * This offers an opportunity for the application to apply a custom transformation
      * to the page views using animation properties.
-     * <p>
-     * <p>As property animation is only supported as of Android 3.0 and forward,
+     *
+     * As property animation is only supported as of Android 3.0 and forward,
      * setting a PageTransformer on a ViewPager on earlier platform versions will
-     * be ignored.</p>
+     * be ignored.
      */
     public interface PageTransformer {
         /**
@@ -612,9 +609,9 @@ public class ViewPagerEx extends ViewGroup {
      * Set a {@link PageTransformer} that will be called for each attached page whenever
      * the scroll position is changed. This allows the application to apply custom property
      * transformations to each page, overriding the default sliding look and feel.
-     * <p>
-     * <p><em>Note:</em> Prior to Android 3.0 the property animation APIs did not exist.
-     * As a result, setting a PageTransformer prior to Android 3.0 (API 11) will have no effect.</p>
+     *
+     * <em>Note:</em> Prior to Android 3.0 the property animation APIs did not exist.
+     * As a result, setting a PageTransformer prior to Android 3.0 (API 11) will have no effect.
      *
      * @param reverseDrawingOrder true if the supplied PageTransformer requires page views
      *                            to be drawn from last to first instead of first to last.
@@ -682,16 +679,16 @@ public class ViewPagerEx extends ViewGroup {
      * Set the number of pages that should be retained to either side of the
      * current page in the view hierarchy in an idle state. Pages beyond this
      * limit will be recreated from the adapter when needed.
-     * <p>
-     * <p>This is offered as an optimization. If you know in advance the number
+     *
+     * This is offered as an optimization. If you know in advance the number
      * of pages you will need to support or have lazy-loading mechanisms in place
      * on your pages, tweaking this setting can have benefits in perceived smoothness
      * of paging animations and interaction. If you have a small number of pages (3-4)
      * that you can keep active all at once, less time will be spent in layout for
-     * newly created view subtrees as the user pages back and forth.</p>
-     * <p>
-     * <p>You should keep this limit low, especially if your pages have complex layouts.
-     * This setting defaults to 1.</p>
+     * newly created view subtrees as the user pages back and forth.
+     *
+     * You should keep this limit low, especially if your pages have complex layouts.
+     * This setting defaults to 1.
      *
      * @param limit How many pages will be kept offscreen in an idle state.
      */
@@ -2265,14 +2262,14 @@ public class ViewPagerEx extends ViewGroup {
 
     /**
      * Start a fake drag of the pager.
-     * <p>
-     * <p>A fake drag can be useful if you want to synchronize the motion of the ViewPager
+     *
+     * A fake drag can be useful if you want to synchronize the motion of the ViewPager
      * with the touch scrolling of another view, while still letting the ViewPager
      * control the snapping motion and fling behavior. (e.g. parallax-scrolling tabs.)
      * Call {@link #fakeDragBy(float)} to simulate the actual drag motion. Call
      * {@link #endFakeDrag()} to complete the fake drag and fling as necessary.
-     * <p>
-     * <p>During a fake drag the ViewPager will ignore all touch events. If a real drag
+     *
+     * During a fake drag the ViewPager will ignore all touch events. If a real drag
      * is already in progress, this method will return false.
      *
      * @return true if the fake drag began successfully, false if it could not be started.

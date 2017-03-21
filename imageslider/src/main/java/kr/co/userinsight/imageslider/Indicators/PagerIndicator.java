@@ -23,7 +23,7 @@ import kr.co.userinsight.imageslider.Tricks.ViewPagerEx;
 /**
  * Created by rimi on 2017. 3. 20..
  * Copyright (c) 2017 UserInsight Corp.
- * <p>
+ *
  * Pager Indicator.
  */
 
@@ -31,7 +31,7 @@ public class PagerIndicator extends LinearLayout implements ViewPagerEx.OnPageCh
     private Context mContext;
 
     /**
-     * bind this Indicator with {@link .Tricks.ViewPagerEx}
+     * bind this Indicator with {@link kr.co.userinsight.imageslider.Tricks.ViewPagerEx}
      */
     private ViewPagerEx mPager;
 
@@ -60,8 +60,8 @@ public class PagerIndicator extends LinearLayout implements ViewPagerEx.OnPageCh
     private Drawable mUnselectedDrawable;
 
     /**
-     * This value is from {@link .SliderAdapter} getRealCount() represent
-     * <p>
+     * This value is from {@link kr.co.userinsight.imageslider.SliderAdapter} getRealCount() represent
+     *
      * the indicator count that we should draw.
      */
     private int mItemCount = 0;
@@ -192,7 +192,7 @@ public class PagerIndicator extends LinearLayout implements ViewPagerEx.OnPageCh
      * if you are using the default indicator, this method will help you to set the shape of
      * indicator, there are two kind of shapes you  can set, oval and rect.
      *
-     * @param shape
+     * @param shape Shape
      */
     public void setDefaultIndicatorShape(Shape shape) {
         if (mUserSetSelectedIndicatorResId == 0) {
@@ -240,8 +240,8 @@ public class PagerIndicator extends LinearLayout implements ViewPagerEx.OnPageCh
      * if you are using the default indicator , this method will help you to set the selected status and
      * the unselected status color.
      *
-     * @param selectedColor
-     * @param unselectedColor
+     * @param selectedColor int
+     * @param unselectedColor int
      */
     public void setDefaultIndicatorColor(int selectedColor, int unselectedColor) {
         if (mUserSetSelectedIndicatorResId == 0) {
@@ -299,7 +299,7 @@ public class PagerIndicator extends LinearLayout implements ViewPagerEx.OnPageCh
     /**
      * set the visibility of indicator.
      *
-     * @param visibility
+     * @param visibility IndicatorVisibility
      */
     public void setIndicatorVisibility(IndicatorVisibility visibility) {
         if (visibility == IndicatorVisibility.Visible) {
@@ -328,7 +328,7 @@ public class PagerIndicator extends LinearLayout implements ViewPagerEx.OnPageCh
     /**
      * bind indicator with viewpagerEx.
      *
-     * @param pager
+     * @param pager ViewPagerEx
      */
     public void setViewPager(ViewPagerEx pager) {
         if (pager.getAdapter() == null) {
@@ -378,7 +378,7 @@ public class PagerIndicator extends LinearLayout implements ViewPagerEx.OnPageCh
     /**
      * since we used a adapter wrapper, so we can't getCount directly from wrapper.
      *
-     * @return
+     * @return int
      */
     private int getShouldDrawCount() {
         if (mPager.getAdapter() instanceof InfinitePagerAdapter) {

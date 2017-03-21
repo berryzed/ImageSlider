@@ -12,18 +12,18 @@ import kr.co.userinsight.imageslider.Tricks.ViewPagerEx;
 /**
  * Created by rimi on 2017. 3. 20..
  * Copyright (c) 2017 UserInsight Corp
- * <p>
+ *
  * This is all transformers father.
- * <p>
- * BaseTransformer implement {@link .Tricks.ViewPagerEx.PageTransformer}
+ *
+ * BaseTransformer implement {@link kr.co.userinsight.imageslider.Tricks.ViewPagerEx.PageTransformer}
  * which is just same as {@link android.support.v4.view.ViewPager.PageTransformer}.
- * <p>
- * After you call setPageTransformer(), transformPage() will be called by {@link .Tricks.ViewPagerEx}
+ *
+ * After you call setPageTransformer(), transformPage() will be called by {@link kr.co.userinsight.imageslider.Tricks.ViewPagerEx}
  * when your slider are animating.
- * <p>
- * In onPreTransform() function, that will make {@link .Animations.BaseAnimationInterface}
+ *
+ * In onPreTransform() function, that will make {@link kr.co.userinsight.imageslider.Animations.BaseAnimationInterface}
  * work.
- * <p>
+ *
  * if you want to make an acceptable transformer, please do not forget to extend from this class.
  */
 
@@ -33,8 +33,8 @@ public abstract class BaseTransformer implements ViewPagerEx.PageTransformer {
     /**
      * Called each {@link #transformPage(View, float)}.
      *
-     * @param view
-     * @param position
+     * @param view View
+     * @param position float
      */
     protected abstract void onTransform(View view, float position);
 
@@ -51,7 +51,7 @@ public abstract class BaseTransformer implements ViewPagerEx.PageTransformer {
      * If the position offset of a fragment is less than negative one or greater than one, returning true will set the
      * visibility of the fragment to {@link View#GONE}. Returning false will force the fragment to {@link View#VISIBLE}.
      *
-     * @return
+     * @return boolean
      */
     protected boolean hideOffscreenPages() {
         return true;
@@ -60,7 +60,7 @@ public abstract class BaseTransformer implements ViewPagerEx.PageTransformer {
     /**
      * Indicates if the default animations of the view pager should be used.
      *
-     * @return
+     * @return boolean
      */
     protected boolean isPagingEnabled() {
         return false;
@@ -69,8 +69,8 @@ public abstract class BaseTransformer implements ViewPagerEx.PageTransformer {
     /**
      * Called each {@link #transformPage(View, float)} before {{@link #onTransform(View, float)} is called.
      *
-     * @param view
-     * @param position
+     * @param view View
+     * @param position float
      */
     protected void onPreTransform(View view, float position) {
         final float width = view.getWidth();
@@ -128,8 +128,8 @@ public abstract class BaseTransformer implements ViewPagerEx.PageTransformer {
     /**
      * Called each {@link #transformPage(View, float)} call after {@link #onTransform(View, float)} is finished.
      *
-     * @param view
-     * @param position
+     * @param view View
+     * @param position float
      */
     protected void onPostTransform(View view, float position) {
         if (mCustomAnimationInterface != null) {

@@ -28,28 +28,28 @@ import kr.co.userinsight.imageslider.Tricks.ViewPagerEx;
 /**
  * Created by rimi on 2017. 3. 20..
  * Copyright (c) 2017 UserInsight Corp.
- * <p>
- * SliderLayout is compound layout. This is combined with {@link .Indicators.PagerIndicator}
- * and {@link .Tricks.ViewPagerEx} .
- * <p>
+ *
+ * SliderLayout is compound layout. This is combined with {@link kr.co.userinsight.imageslider.Indicators.PagerIndicator}
+ * and {@link kr.co.userinsight.imageslider.Tricks.ViewPagerEx} .
+ *
  * There is some properties you can set in XML:
- * <p>
+ *
  * indicator_visibility
  * visible
  * invisible
- * <p>
+ *
  * indicator_shape
  * oval
  * rect
- * <p>
+ *
  * indicator_selected_color
- * <p>
+ *
  * indicator_unselected_color
- * <p>
+ *
  * indicator_selected_drawable
- * <p>
+ *
  * indicator_unselected_drawable
- * <p>
+ *
  * pager_animation
  * Default
  * Accordion
@@ -67,7 +67,7 @@ import kr.co.userinsight.imageslider.Tricks.ViewPagerEx;
  * ZoomIn
  * ZoomOutSlide
  * ZoomOut
- * <p>
+ *
  * pager_animation_span
  */
 
@@ -84,19 +84,19 @@ public class SliderLayout extends RelativeLayout {
     private SliderAdapter mSliderAdapter;
 
     /**
-     * {@link .Tricks.ViewPagerEx} indicator.
+     * {@link kr.co.userinsight.imageslider.Tricks.ViewPagerEx} indicator.
      */
     private PagerIndicator mIndicator;
 
 
     /**
-     * A timer and a TimerTask using to cycle the {@link .Tricks.ViewPagerEx}.
+     * A timer and a TimerTask using to cycle the {@link kr.co.userinsight.imageslider.Tricks.ViewPagerEx}.
      */
     private Timer mCycleTimer;
     private TimerTask mCycleTask;
 
     /**
-     * For resuming the cycle, after user touch or click the {@link .Tricks.ViewPagerEx}.
+     * For resuming the cycle, after user touch or click the {@link kr.co.userinsight.imageslider.Tricks.ViewPagerEx}.
      */
     private Timer mResumingTimer;
     private TimerTask mResumingTask;
@@ -107,7 +107,7 @@ public class SliderLayout extends RelativeLayout {
     private boolean mCycling;
 
     /**
-     * Determine if auto recover after user touch the {@link .Tricks.ViewPagerEx}
+     * Determine if auto recover after user touch the {@link kr.co.userinsight.imageslider.Tricks.ViewPagerEx}
      */
     private boolean mAutoRecover = true;
 
@@ -126,24 +126,25 @@ public class SliderLayout extends RelativeLayout {
     private long mSliderDuration = 4000;
 
     /**
-     * Visibility of {@link .Indicators.PagerIndicator}
+     * Visibility of {@link kr.co.userinsight.imageslider.Indicators.PagerIndicator}
      */
     private PagerIndicator.IndicatorVisibility mIndicatorVisibility = PagerIndicator.IndicatorVisibility.Visible;
 
     /**
-     * {@link .Tricks.ViewPagerEx} 's transformer
+     * {@link kr.co.userinsight.imageslider.Tricks.ViewPagerEx} 's transformer
      */
     private BaseTransformer mViewPagerTransformer;
 
     /**
-     * @see .Animations.BaseAnimationInterface
+     * @see kr.co.userinsight.imageslider.Animations.BaseAnimationInterface
      */
     private BaseAnimationInterface mCustomAnimation;
 
     /**
-     * {@link .Indicators.PagerIndicator} shape, rect or oval.
+     * {@link kr.co.userinsight.imageslider.Indicators.PagerIndicator} shape, rect or oval.
+     *
+     * @param context Context
      */
-
     public SliderLayout(Context context) {
         this(context, null);
     }
@@ -285,7 +286,7 @@ public class SliderLayout extends RelativeLayout {
     }
 
     /**
-     * set the duration between two slider changes. the duration value must >= 500
+     * set the duration between two slider changes. the duration value must more 500
      *
      * @param duration long
      */
@@ -450,8 +451,8 @@ public class SliderLayout extends RelativeLayout {
 
     /**
      * Inject your custom animation into PageTransformer, you can know more details in
-     * {@link .Animations.BaseAnimationInterface},
-     * and you can see a example in {@link .Animations.DescriptionAnimation}
+     * {@link kr.co.userinsight.imageslider.Animations.BaseAnimationInterface},
+     * and you can see a example in {@link kr.co.userinsight.imageslider.Animations.DescriptionAnimation}
      *
      * @param animation BaseAnimationInterface
      */
@@ -548,7 +549,7 @@ public class SliderLayout extends RelativeLayout {
     }
 
     /**
-     * get the {@link .Indicators.PagerIndicator} instance.
+     * get the {@link kr.co.userinsight.imageslider.Indicators.PagerIndicator} instance.
      * You can manipulate the properties of the indicator.
      *
      * @return PagerIndicator
@@ -649,6 +650,8 @@ public class SliderLayout extends RelativeLayout {
 
     /**
      * remove  the slider at the position. Notice: It's a not perfect method, a very small bug still exists.
+     *
+     * @param position int
      */
     public void removeSliderAt(int position) {
         if (getRealAdapter() != null) {
@@ -676,6 +679,7 @@ public class SliderLayout extends RelativeLayout {
      * set current slider
      *
      * @param position int
+     * @param smooth boolean
      */
     public void setCurrentPosition(int position, boolean smooth) {
         if (getRealAdapter() == null)
@@ -694,6 +698,8 @@ public class SliderLayout extends RelativeLayout {
 
     /**
      * move to prev slide.
+     *
+     * @param smooth boolean
      */
     public void movePrevPosition(boolean smooth) {
 
@@ -709,6 +715,8 @@ public class SliderLayout extends RelativeLayout {
 
     /**
      * move to next slide.
+     *
+     * @param smooth boolean
      */
     public void moveNextPosition(boolean smooth) {
 

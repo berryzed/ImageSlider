@@ -19,11 +19,11 @@ import kr.co.userinsight.imageslider.R;
 /**
  * Created by rimi on 2017. 3. 20..
  * Copyright (c) 2017 UserInsight Corp.
- * <p>
+ *
  * When you want to make your own slider view, you must extends from this class.
  * BaseSliderView provides some useful methods.
- * I provide two example: {@link .SliderTypes.DefaultSliderView} and
- * {@link .SliderTypes.TextSliderView}
+ * I provide two example: {@link kr.co.userinsight.imageslider.SliderTypes.DefaultSliderView} and
+ * {@link kr.co.userinsight.imageslider.SliderTypes.TextSliderView}
  * if you want to show progressbar, you just need to set a progressbar id as @+id/loading_bar.
  */
 
