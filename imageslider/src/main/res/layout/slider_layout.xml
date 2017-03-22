@@ -5,12 +5,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <kr.co.userinsight.allat.slider.Tricks.InfiniteViewPager
-        android:id="@+id/daimajia_slider_viewpager"
+    <kr.co.userinsight.imageslider.Tricks.InfiniteViewPager
+        android:id="@+id/slider_viewpager"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
 
-    <kr.co.userinsight.allat.slider.Indicators.PagerIndicator
+    <kr.co.userinsight.imageslider.Indicators.PagerIndicator
         android:id="@+id/default_center_bottom_indicator"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -20,7 +20,7 @@
         android:paddingBottom="10dp"
         custom:shape="oval"/>
 
-    <kr.co.userinsight.allat.slider.Indicators.PagerIndicator
+    <kr.co.userinsight.imageslider.Indicators.PagerIndicator
         android:id="@+id/default_bottom_right_indicator"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -30,7 +30,7 @@
         android:paddingBottom="10dp"
         android:paddingEnd="10dp"/>
 
-    <kr.co.userinsight.allat.slider.Indicators.PagerIndicator
+    <kr.co.userinsight.imageslider.Indicators.PagerIndicator
         android:id="@+id/default_bottom_left_indicator"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -40,7 +40,7 @@
         android:paddingBottom="10dp"
         android:paddingStart="10dp"/>
 
-    <kr.co.userinsight.allat.slider.Indicators.PagerIndicator
+    <kr.co.userinsight.imageslider.Indicators.PagerIndicator
         android:id="@+id/default_center_top_indicator"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -49,7 +49,7 @@
         android:gravity="center"
         android:paddingTop="10dp"/>
 
-    <kr.co.userinsight.allat.slider.Indicators.PagerIndicator
+    <kr.co.userinsight.imageslider.Indicators.PagerIndicator
         android:id="@+id/default_center_top_right_indicator"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -59,7 +59,7 @@
         android:paddingEnd="10dp"
         android:paddingTop="10dp"/>
 
-    <kr.co.userinsight.allat.slider.Indicators.PagerIndicator
+    <kr.co.userinsight.imageslider.Indicators.PagerIndicator
         android:id="@+id/default_center_top_left_indicator"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
